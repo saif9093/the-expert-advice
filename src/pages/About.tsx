@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Award, Users, Globe2, TrendingUp } from 'lucide-react';
 
 const milestones = [
-  { year: '2009', title: 'Founded', desc: 'The Expert Advice Immigration Consultants opens its doors in Toronto.' },
+  { year: '2009', title: 'Founded', desc: 'The Expert Advice Immigration Consultants opens its doors in Dubai.' },
   { year: '2012', title: '1,000 Clients', desc: 'Reached our first major milestone of successful client cases.' },
   { year: '2016', title: 'UK & Europe Expansion', desc: 'Launched dedicated services for UK and European immigration pathways.' },
   { year: '2019', title: '3,000 Cases', desc: 'Expanded our team to 25+ licensed consultants serving clients globally.' },
