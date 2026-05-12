@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
   {
-    label: 'Services',
+    label: 'Our Services',
     href: '/services',
     children: [
       { label: 'Skilled Visa', href: '/services/skilled-visa' },
@@ -18,19 +18,26 @@ const navLinks = [
     ],
   },
   {
-    label: 'Destinations',
+    label: 'Countries',
     href: '/destinations',
     children: [
+      { label: 'Europe', href: '/destinations/europe' },
       { label: 'Canada', href: '/destinations/canada' },
       { label: 'Australia', href: '/destinations/australia' },
       { label: 'United Kingdom', href: '/destinations/uk' },
       { label: 'United States', href: '/destinations/usa' },
-      { label: 'Europe', href: '/destinations/europe' },
       { label: 'New Zealand', href: '/destinations/new-zealand' },
+      { label: 'Belgium', href: '/destinations/belgium' },
+      { label: 'Finland', href: '/destinations/finland' },
+      { label: 'Italy', href: '/destinations/italy' },
+      { label: 'Luxembourg', href: '/destinations/luxembourg' },
+      { label: 'Netherlands', href: '/destinations/netherlands' },
+      { label: 'Switzerland', href: '/destinations/switzerland' },
     ],
   },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Partner With Us', href: '/partner' },
+  { label: 'Fraud Prevention', href: '/fraud-prevention' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 export default function Header() {
@@ -62,17 +69,18 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center group">
-            <img 
-              src="/TEA-web-logo.webp" 
-              alt="The Expert Advice" 
-              className="h-12 sm:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+
+          {/* Logo — bigger, no text */}
+          <Link to="/" className="flex items-center group flex-shrink-0">
+            <img
+              src="/TEA-web-logo.webp"
+              alt="The Expert Advice"
+              className="h-12 sm:h-14 lg:h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-0.5">
             {navLinks.map((link) => (
               <div
                 key={link.label}
@@ -83,7 +91,7 @@ export default function Header() {
                 <Link
                   to={link.href}
                   className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                    location.pathname === link.href || location.pathname.startsWith(link.href + '/')
+                    location.pathname === link.href || location.pathname.startsWith(link.href + '/') && link.href !== '/contact'
                       ? 'text-gold-400'
                       : 'text-gray-300 hover:text-white'
                   }`}
@@ -92,8 +100,8 @@ export default function Header() {
                   {link.children && <ChevronDown className="w-3.5 h-3.5" />}
                 </Link>
                 {link.children && activeDropdown === link.label && (
-                  <div className="absolute top-full left-0 pt-1 min-w-48">
-                    <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden">
+                  <div className="absolute top-full left-0 pt-1 min-w-52">
+                    <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2 overflow-hidden max-h-80 overflow-y-auto">
                       {link.children.map((child) => (
                         <Link
                           key={child.label}
@@ -111,8 +119,8 @@ export default function Header() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden lg:flex items-center gap-6">
-            <a href="tel:+97148873662" className="text-white text-base font-bold transition-colors mr-2">
+          <div className="hidden lg:flex items-center gap-4">
+            <a href="tel:+97148873662" className="text-white text-sm font-bold transition-colors hover:text-gold-400">
               +971 4 8873662
             </a>
             <Link to="/contact" className="btn-primary text-sm px-5 py-2.5">

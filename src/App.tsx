@@ -12,6 +12,8 @@ import Testimonials from './pages/Testimonials';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
+import PartnerWithUs from './pages/PartnerWithUs';
+import FraudPrevention from './pages/FraudPrevention';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/partner" element={<PartnerWithUs />} />
+          <Route path="/fraud-prevention" element={<FraudPrevention />} />
         </Routes>
       </main>
       <Footer />

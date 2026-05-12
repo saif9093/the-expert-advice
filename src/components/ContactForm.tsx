@@ -14,7 +14,23 @@ export default function ContactForm({ formType = 'contact', showCountry = false,
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
-  const countries = ['Canada', 'Australia', 'United Kingdom', 'United States', 'Germany', 'Portugal', 'Netherlands', 'Other'];
+  const countries = [
+    'Europe',
+    'Canada',
+    'Australia',
+    'United Kingdom',
+    'United States',
+    'Belgium',
+    'Finland',
+    'Germany',
+    'Italy',
+    'Luxembourg',
+    'Netherlands',
+    'New Zealand',
+    'Portugal',
+    'Switzerland',
+    'Other',
+  ];
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
