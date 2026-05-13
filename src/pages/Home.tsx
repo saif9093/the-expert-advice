@@ -418,7 +418,7 @@ export default function Home() {
                 </a>
                 <span className="text-gray-300">|</span>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/97148873662"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-green-600 font-semibold hover:text-green-500 transition-colors"
@@ -456,7 +456,7 @@ export default function Home() {
               Book Free Consultation <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/97148873662"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white font-semibold px-8 py-4 rounded-md transition-all duration-200"

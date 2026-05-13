@@ -37,6 +37,7 @@ const navLinks = [
   },
   { label: 'Partner With Us', href: '/partner' },
   { label: 'Fraud Prevention', href: '/fraud-prevention' },
+  { label: 'Pay By Link', href: '/pay-by-link' },
   { label: 'Contact Us', href: '/contact' },
 ];
 
@@ -67,8 +68,8 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 xl:h-20">
 
           {/* Logo — bigger, no text */}
           <Link to="/" className="flex items-center group flex-shrink-0">
@@ -80,7 +81,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-0.5">
+          <nav className="hidden xl:flex items-center gap-1 2xl:gap-2">
             {navLinks.map((link) => (
               <div
                 key={link.label}
@@ -90,7 +91,7 @@ export default function Header() {
               >
                 <Link
                   to={link.href}
-                  className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`flex items-center gap-1 px-2.5 py-2 text-sm font-medium whitespace-nowrap rounded-md transition-colors ${
                     location.pathname === link.href || location.pathname.startsWith(link.href + '/') && link.href !== '/contact'
                       ? 'text-gold-400'
                       : 'text-gray-300 hover:text-white'
@@ -119,18 +120,18 @@ export default function Header() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+97148873662" className="text-white text-sm font-bold transition-colors hover:text-gold-400">
+          <div className="hidden xl:flex items-center gap-4">
+            <a href="tel:+97148873662" className="text-white text-sm font-bold whitespace-nowrap transition-colors hover:text-gold-400">
               +971 4 8873662
             </a>
-            <Link to="/contact" className="btn-primary text-sm px-5 py-2.5">
+            <Link to="/contact" className="btn-primary whitespace-nowrap text-sm px-5 py-2.5">
               Book Consultation
             </Link>
           </div>
 
           {/* Mobile Toggle */}
           <button
-            className="lg:hidden p-2 text-white"
+            className="xl:hidden p-2 text-white"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -141,7 +142,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-navy-950 border-t border-navy-800">
+        <div className="xl:hidden bg-navy-950 border-t border-navy-800">
           <div className="px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
             {navLinks.map((link) => (
               <div key={link.label}>

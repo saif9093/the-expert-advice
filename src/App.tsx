@@ -14,10 +14,13 @@ import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import PartnerWithUs from './pages/PartnerWithUs';
 import FraudPrevention from './pages/FraudPrevention';
+import PayByLink from './pages/PayByLink';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
       <main>
         <Routes>
@@ -33,6 +36,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/partner" element={<PartnerWithUs />} />
           <Route path="/fraud-prevention" element={<FraudPrevention />} />
+          <Route path="/pay-by-link" element={<PayByLink />} />
         </Routes>
       </main>
       <Footer />

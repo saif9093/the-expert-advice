@@ -89,7 +89,7 @@ export default function Footer() {
             <div className="mt-5">
               <p className="text-xs text-gray-500 mb-2">Mon to Sat 09:30 AM to 06:30 PM</p>
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/97148873662"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-green-400 hover:text-green-300 font-medium transition-colors"

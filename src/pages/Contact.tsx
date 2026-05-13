@@ -33,7 +33,7 @@ export default function Contact() {
 
               <div className="space-y-5 mb-10">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+97148873662"
                   className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-navy-50 transition-colors group"
                 >
                   <div className="w-12 h-12 bg-navy-950 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -45,7 +45,7 @@ export default function Contact() {
                   </div>
                 </a>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/97148873662"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl hover:bg-green-50 transition-colors group"
